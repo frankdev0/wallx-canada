@@ -369,7 +369,7 @@ export default function Home() {
       {/* ELEVEN SECTION */}
       
         <div className='mt-3 d-flex justify-content-center align-items-center'>
-          <h3>Let's Answer Your Questions!</h3>
+        <h3>Let&apos;s Answer Your Questions!</h3>
         </div>
         <div className='d-flex justify-content-center align-items-center'>
       <div className={`row ${styles.faq}`}>
@@ -478,7 +478,7 @@ export default function Home() {
           </div>
           </div>
           <div>
-            <p className={styles.footerfonts}>All Right Reserved © Copyright - 2023: WallX Innovation Inc. is a licensed MSB established in North America and regulated by FINTRAC. WallX provides a savings wallets, secure P2P payment and a tailor-made business tool for SMB's. Get in Touch with us on: hello@wallx.app</p>
+            <p className={styles.footerfonts}>All Right Reserved &copy; Copyright - 2023: WallX Innovation Inc. is a licensed MSB established in North America and regulated by FINTRAC. WallX provides a savings wallets, secure P2P payment and a tailor-made business tool for SMB's. Get in Touch with us on: hello@wallx.app</p>
           </div>
 
        
