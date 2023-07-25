@@ -478,7 +478,7 @@ export default function Home() {
           </div>
           </div>
           <div>
-            <p className={styles.footerfonts}>All Right Reserved &copy; Copyright - 2023: WallX Innovation Inc. is a licensed MSB established in North America and regulated by FINTRAC. WallX provides a savings wallets, secure P2P payment and a tailor-made business tool for SMB's. Get in Touch with us on: hello@wallx.app</p>
+            <p className={styles.footerfonts}>All Right Reserved &copy; Copyright - 2023: WallX Innovation Inc. is a licensed MSB established in North America and regulated by FINTRAC. WallX provides a savings wallets, secure P2P payment and a tailor-made business tool for SMB&apos;s. Get in Touch with us on: hello@wallx.app</p>
           </div>
 
        
