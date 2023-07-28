@@ -196,7 +196,7 @@ export default function Home() {
         <div className={styles.textboxes}>
           <h3 className={styles.payment}>Fast Payment</h3>
           <p>With WallX secure PayCode, you can make payments for anything and to anyone from anywhere.</p>
-          <div className='pt-4'>
+          <div className={`${styles.buttonbox} pt-4`}>
             <button className={styles.getstarted}>Get Started Now</button>
           </div>
         </div>
@@ -208,7 +208,7 @@ export default function Home() {
         <div className={styles.textboxes}>
           <h3 className={styles.payment}>Secured Platform</h3>
           <p>PayCode Funds are secure and save. We monitor all transaction stages to ensure it gets to the right person.</p>
-          <div>
+          <div className={styles.buttonbox}>
             <button className={styles.getstarted}>Get Started Now</button>
           </div>
         </div>
@@ -220,8 +220,8 @@ export default function Home() {
         <div className={styles.textboxes}>
           <h3 className={styles.payment}>B2B Merchant Payment</h3>
           <p>Are you a business or an African merchant looking to recieve payments from your international customers? Lets KYC you today!</p>
-          <div>
-            <button className={styles.getstarted}>Get Started Now</button>
+          <div className={styles.buttonbox}>
+            <button className={`${styles.getstarted} `}>Get Started Now</button>
           </div>
         </div>
       </div>
