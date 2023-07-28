@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import { useEffect, useState } from 'react'
-
-const inter = Inter({ subsets: ['latin'] })
+// import sideImage from '../../public/side_image1.svg'
+import { BsArrowRight } from 'react-icons/bs';
+import { IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowUp } from 'react-icons/io';
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState<number>(-1);
@@ -141,36 +144,37 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <>
-      <div className='d-flex justify-content-center'>
+      <div className='d-flex justify-content-center mt-4'>
         <div className={styles.navitems}>
           <div>
-            <Image src='/wallxx.png' width={30} height={30} alt='wallx logo' />
+            <Image src='/svgg.svg' width={30} height={30} alt='wallx logo' />
           </div>
-          <div>Home</div>
-          <button className='btn'>Download Now</button>
+          <div className={styles.home}>Home</div>
+          <button className={styles.downloadnow}>Download Now</button>
         </div>
         </div>
       {/* HERO BACKGROUND */}
-      <div className='d-flex justify-content-center'>
+      <div className='d-flex justify-content-center mx-5'>
   <div className={`row ${styles.herobackground}`}>
     <div className='col-12 col-lg-6 d-flex justify-content-center align-items-center'>
-      <div>
-        <h3 className={`${styles.header} text-center text-lg-start`}>
+      <div className={styles.herotext}>
+        <h3 className={`${styles.header} text-center `}>
           Experience A New Era of Payment with PayCodes
         </h3>
-        <div>
-          <p className={`${styles.texts} text-center text-lg-start`}>
+        <div className='my-3'>
+          <p className={`${styles.texts} `}>
             Send Money to Family & Friends. Make Instant Payments to African Merchants.
           </p>
         </div>
         <div className={styles.herobtn}>
-        <button className={`btn ${styles.genericbtn}`}>Get Started</button>
+        <button className= {styles.genericbtn}>Get Started</button>
         </div>
         
       </div>
     </div>
-    <div className='col-12 col-lg-6 d-flex justify-content-center align-items-center'>
-      <Image src='/activities.png' alt='' width={300} height={250} />
+    <div className='col-12 col-lg-6 d-flex justify-content-end align-items-center'>
+      {/* <Image src='/activities.png' alt='' width={300} height={250} /> */}
+      <Image src='/herophone.svg' alt='' width={700} height={450} className={styles.responsiveimg} />
     </div>
   </div>
 </div>
@@ -187,29 +191,38 @@ export default function Home() {
       <div className={styles.gridcontainer}>
       <div className={styles.boxes}>
         <div className={styles.imageContainer}>
-        <Image src='/group.png' width={200} height={200} alt='group' />
+        <Image src='/light.svg' width={200} height={200} alt='group' />
         </div>
         <div className={styles.textboxes}>
-          <h3>Fast Payment</h3>
+          <h3 className={styles.payment}>Fast Payment</h3>
           <p>With WallX secure PayCode, you can make payments for anything and to anyone from anywhere.</p>
+          <div className='pt-4'>
+            <button className={styles.getstarted}>Get Started Now</button>
+          </div>
         </div>
       </div>
       <div className={styles.boxes}>
         <div className={styles.imageContainer}>
-        <Image src='/lock.png' width={200} height={200} alt='lock' />
+        <Image src='/lock.svg' width={200} height={200} alt='lock' />
         </div>
         <div className={styles.textboxes}>
-          <h3>Secured Platform</h3>
+          <h3 className={styles.payment}>Secured Platform</h3>
           <p>PayCode Funds are secure and save. We monitor all transaction stages to ensure it gets to the right person.</p>
+          <div>
+            <button className={styles.getstarted}>Get Started Now</button>
+          </div>
         </div>
       </div>
       <div className={styles.boxes}>
         <div className={styles.imageContainer}>
-        <Image src='/globe.png' width={200} height={200} alt='globe' />
+        <Image src='/globe.svg' width={200} height={200} alt='globe' />
         </div>
         <div className={styles.textboxes}>
-          <h3>B2B Merchant Payment</h3>
+          <h3 className={styles.payment}>B2B Merchant Payment</h3>
           <p>Are you a business or an African merchant looking to recieve payments from your international customers? Lets KYC you today!</p>
+          <div>
+            <button className={styles.getstarted}>Get Started Now</button>
+          </div>
         </div>
       </div>
       </div>
@@ -219,13 +232,13 @@ export default function Home() {
           <div>
         <h3 className={styles.fifthheader}>Send and receive funds with PayCode</h3>
         <p className={styles.fifthtexts}>Sending money just got secure, easier and faster. Make payments easily.</p>
-        <div>
+        <div className={styles.btns}>
           <button className={styles.genericbtn}>Get Started</button>
         </div>
         </div>
         </div>
-        <div className={`${styles.bellimg} col-12 col-lg-6 d-flex justify-content-center align-items-center`}>
-      <Image src='/activities.png' alt='' width={300} height={250} />
+        <div className={`${styles.bellimg} col-12 col-lg-6 d-flex align-items-center`}>
+      <Image src='/wallxad.svg' alt='lady with phone' width={500} height={500} className={styles.respimg}/>
     </div>
        
       </div>
@@ -233,13 +246,13 @@ export default function Home() {
       <div className={`${styles.sixthbackground} row`}>
         
         <div className='col-12 col-lg-6 d-flex justify-content-center align-items-center'>
-        <Image src='/grouphero.png' width={400} height={300} alt='trophy cup' />
+        <Image src='/groupp.svg' width={500} height={500} alt='trophy cup' className={styles.respimg}/>
         </div>
         <div className={`${styles.sixthbox} col-12 col-lg-6 d-flex justify-content-center align-items-center`}>
           <div className={styles.sixbox}>
         <h3 className={styles.sixthheader}>Make Payments to African Merchants in Multi-Currency using PayCodese</h3>
         <p className={styles.fifthtexts}>We enable trade for small businesses owners in Africa. Creating huge impacts in their lives.</p>
-        <div>
+        <div className={styles.btns}>
           <button className={`${styles.genericbtn} text-left`}>Get Started</button>
         </div>
         </div>
@@ -263,13 +276,16 @@ export default function Home() {
           <div>
         <h3 className={styles.eightheader}>Virtual card just for you</h3>
         <p className={styles.eighttexter}>Looking for a virtual card to make online payments, purchases and subscriptions? Earn points anytime you spend</p>
-        <div className='mt-3'>
+        <div className='mt-3 d-flex align-items-center justify-content-center'>
           <div className={styles.wallxtext}>Start with WallX now!</div>
+          <div>
+          <BsArrowRight className='mx-2 text-light' size={32} />
+          </div>
         </div>
         </div>
         </div>
         <div className={`${styles.boxtwo} col-12 col-lg-6 d-flex justify-content-center align-items-center`}>
-        <Image src='/cards.png' width={350} height={300} alt='trophy cup' />
+        <Image src='/cards.svg' width={400} height={400} alt='trophy cup' />
         </div>
       </div>
       </div>
@@ -281,7 +297,16 @@ export default function Home() {
             <h3>Get Some Cashbacks & Perks</h3>
             <p>Enjoy rewards, perks and cashback everytime you generate and spend a PayCode</p>
             <div className='d-flex justify-content-center'>
-              <Image src='/trophy.png' width={200} height={200} alt='trophy cup' />
+              <div>
+              <Image src='/cup.svg' width={300} height={200} alt='trophy cup' />
+              <div>
+              <div className='d-flex align-items-center'>
+              <div className={styles.startwallx}>Start with Wallx now!</div>
+          <BsArrowRight className={styles.arrows} size={32} />
+          </div>
+              </div>
+              
+              </div>
             </div>
           </div>
         </div>
@@ -289,8 +314,19 @@ export default function Home() {
         <div className={styles.nineboxx}>
             <h3>Multi-Currency Wallet</h3>
             <p>Open Wallets you only need and no fees. Just top up and generate PayCodes in selected currencies</p>
-            <div className='d-flex justify-content-center'>
+            {/* <div className='d-flex justify-content-center'>
               <Image src='/wallet.png' width={200} height={200} alt='trophy cup' />
+            </div> */}
+             <div className='d-flex justify-content-center'>
+              <div>
+              <Image className='mb-3' src='/wallet.png' width={200} height={200} alt='trophy cup' />
+              <div>
+              <div className='d-flex align-items-center'>
+              <div className={styles.startwallx}>Start with Wallx now!</div>
+          <BsArrowRight className={styles.arrows} size={32} />
+          </div>
+              </div>
+              </div>
             </div>
           </div>
         </div>
@@ -303,13 +339,16 @@ export default function Home() {
           <div>
         <h3 className={styles.eightheader}>Realtime financial Updates Just for you</h3>
         <p className={styles.eighttexter}>Subscribe to our newsletter and be the first to know exciting things about WallX Inc.</p>
-        <div className='mt-3'>
+        <div className='mt-3 d-flex align-items-center justify-content-center'>
           <div className={styles.wallxtext}>Start with WallX now!</div>
+          <div>
+          <BsArrowRight className='mx-2 text-light' size={32} />
+          </div>
         </div>
         </div>
         </div>
         <div className={`${styles.boxtwo} col-12 col-lg-6 d-flex justify-content-center align-items-center pt-5`}>
-        <Image src='/activities.png' width={350} height={300} alt='trophy cup' />
+        <Image src='/activity.svg' width={350} height={300} alt='trophy cup' />
         </div>
       </div>
       </div>
@@ -319,8 +358,9 @@ export default function Home() {
         <div className={styles.sliderheader}>
           <h3 className={styles.wallxheading}>What People say about WallX</h3>
           <div className='d-flex'>
-          <div  onClick={nextSlide} >+</div>
-          <div  onClick={prevSlide} className='px-3'>-</div>
+          <IoIosArrowBack onClick={nextSlide} className={styles.prevv} size={25} />
+          <IoIosArrowForward onClick={prevSlide} className={styles.nextt} size={25} />
+       
           </div>
         </div>
   
@@ -380,7 +420,7 @@ export default function Home() {
             <div key={index} className={styles.faqbody}>
             <div className={styles.question}>
             <p>{item.question}</p>
-            <div className={styles.faqselector} onClick={() => toggleAccordion(index)} >{activeIndex === index ? '-' : '+'}</div>
+            <div className={styles.faqselector} onClick={() => toggleAccordion(index)} >{activeIndex === index ? <IoIosArrowUp size={15}/> :  <IoIosArrowDown size={15} />}</div>
           </div>
           
           {activeIndex === index && (
@@ -402,7 +442,7 @@ export default function Home() {
             <div key={index} className={styles.faqbody}>
             <div className={styles.question}>
             <p>{item.question}</p>
-            <div className={styles.faqselector} onClick={() => toggleAccordionn(index)}>{activeIndexx === index ? '-' : '+'}</div>
+            <div className={styles.faqselector} onClick={() => toggleAccordionn(index)}>{activeIndexx === index ? <IoIosArrowUp size={15}/> :  <IoIosArrowDown size={15} />}</div>
           </div>
           
           {activeIndexx === index && (
@@ -443,19 +483,19 @@ export default function Home() {
 
       <div>
         <div className={styles.footercontainer}>
-          <div>
-          <Image className='mx-2'  src='/wallxx.png' width={50} height={50} alt='trophy cup' />
+          <div className={styles.rightreserved}>
+          <Image className='mx-2 mb-4'  src='/wallxx.png' width={50} height={50} alt='trophy cup' />
           <p className={styles.copyright}>© 2023 WallXInc. All Rights Reserved</p>
           </div>
           <div className={styles.footerfonts}>
-            <h6>Company</h6>
+            <h6 className={styles.footerheaders}>Company</h6>
             <p>Team</p>
             <p>About</p>
             <p>Terms of Use</p>
             <p>Disclaimers</p>
           </div>
           <div className={styles.footerfonts}>
-            <h6>Contact</h6>
+            <h6 className={styles.footerheaders}>Contact</h6>
             <p>hello@wallX.Inc</p>
             <p>+234(70) 5373 7645</p>
             <p>United States </p>
@@ -468,8 +508,8 @@ export default function Home() {
           </div>
           <div className={styles.lastgrid}>
             <div>
-            <h6>Social Media</h6>
-            <div className='d-flex'>
+            <h6 className={styles.footerheaders}>Social Media</h6>
+            <div className='d-flex justify-content-center'>
               <div><Image src='/twitter.png' width={30} height={30} alt='trophy cup' /></div>
               <div><Image src='/instagram.png' width={30} height={30} alt='trophy cup' /></div>
               <div><Image src='/facebook.png' width={30} height={30} alt='trophy cup' /></div>
